@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+	<canvas id="canvas" width="200" height="200" style="border:1px solid #d3d3d3;"></canvas>
+	<input type="button" id="convert" value="convert"/>
+	<script>
+
+		var img = new Image();
+		img.src = "Assignment/images/po.jpg";
+		img.onload = function() {
+		  draw(this);
+		};
+		function draw(img){
+			var canvas = document.getElementById('canvas');
+			var ctx = canvas.getContext("2d");
+			ctx.drawImage(img, 0, 0);
+			var data = ctx.getImageData(0,0,canvas.width,canvas.height);
+			console.log("pixel data:", data,"no of pixels:", data.data.length/4);
+		}
+	</script>
+</body>
+</html>
