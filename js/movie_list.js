@@ -1,20 +1,49 @@
-$(document).ready(function(){
-	console.log("in movie.js");
-	var jqxhr = $.getJSON("movie-list.json", function(data){
-		var items = [];
-		var $list = $('#list');
-		$.each(data, function(idx, item){
-			items.push('<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>' + item.RunTime + '</p><p>' + item.UserVotes + '</p><p>' + item.likes + '</p></div></li>');
-		});
-		$("<ul/>", {
-			"class": "new-movie",
-			html: items.join('')
-		}).appendTo($list);
-	}).done(function(){
-		console.log("success");
-	}).fail(function(){
-		console.log("error");
-	}).always( function () {
-		console.log("complete");
-	});
-});
+(function(){
+	"use strict";
+console.log("in movie.js");
+	var tabs = function(options){
+		var el = document.querySelector(options.el);
+		var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
+		var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
+		var activeIndex = 0;
+		var initCalled = false;
+
+		var init = function(){
+			console.log("in init");
+			if(!initCalled){
+				initCalled = true;
+				// el.classList.remove('no-js');
+
+				for(var i = 0; i < tabNavigationLinks.length; i++){
+					var link = tabNavigationLinks[i];
+					handleClick(link, i);
+				}
+			}
+		};
+
+		var handleClick = function(link, index){
+			link.addEventListener('click', function(e){
+				e.preventDefault();
+				goToTab(index);
+			});
+		};
+
+		var goToTab = function(index){
+			if(index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length){
+				tabNavigationLinks[activeIndex].classList.remove('is-active');
+				tabNavigationLinks[index].classList.add('is-active');
+				tabContentContainers[activeIndex].classList.remove('is-active');
+				tabContentContainers[index].classList.add('is-active');
+				activeIndex = index;
+			}
+		};
+
+		return {
+			init: init,
+			goToTab: goToTab
+		};
+	};
+
+	window.tabs = tabs;
+
+})();

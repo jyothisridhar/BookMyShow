@@ -36,7 +36,7 @@
 	 
 	 "EventName": "Tintin",
 
-	 "Language"	: ["Tamil , English"],
+	 "Language"	: ["Tamil" , "English"],
  		
  	 "Genre"	: ["Action", "Romance", "Adventure"], 
 
@@ -52,7 +52,7 @@
 	 
 	 "EventName": "April 2001",
 
-	 "Language"	: ["Kanada , Hindi"],
+	 "Language"	: ["Kannada" , "Hindi"],
  		
  	 "Genre"	: ["Romance", "Adventure"], 
 
@@ -68,7 +68,7 @@
 	 
 	 "EventName": "Bajirao Mastani",
 
-	 "Language"	: ["Hindi , Marathi"],
+	 "Language"	: ["Hindi" , "Marathi"],
  		
  	 "Genre"	: ["Action", "Romance", "Adventure"], 
 

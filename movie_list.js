@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	document.getElementById('all').className = "selected";
 	console.log("in movie.js");
 	var jqxhr = $.getJSON("movie-list.json", function(data){
 		var items = [];

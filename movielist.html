@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 	<script src="js/movie_list.js"></script>
+	<script src="js/display_movies.js"></script>
 </head>
 <body>
 	<section class="carousel">
@@ -20,16 +21,29 @@
 	</section>
 
 	<br>
-	<nav class="lang-tab">
-		<ul>
-			<li id="all"><a href="#">All Languages</a></li>
-	        <li id="english"><a href="#">English</a></li>
-	        <li id="hindi"><a href="#">Hindi</a></li>
-	        <li id="kannada"><a href="#">Kannada</a></li>
-	        <li id="tamil"><a href="#">Tamil</a></li>
-		</ul>
-	</nav>
-	<section id="list">
+	<section id="tabs" class="lang-tabs">
+		<div class="tabs-nav">
+			<a class="tabs-nav-link is-active" href="#">All Languages</a>
+	        <a class="tabs-nav-link" href="#">English</a>
+	        <a class="tabs-nav-link" href="#">Hindi</a>
+	        <a class="tabs-nav-link" href="#">Kannada</a>
+	        <a class="tabs-nav-link" href="#">Tamil</a>
+		</div>
+		<div class="tab is-active">
+			<div id="all" class="tab-content"></div>
+		</div>
+		<div class="tab">
+			<div id="english" class="tab-content"></div>
+		</div>
+		<div class="tab">
+			<div id="hindi" class="tab-content"></div>
+		</div>
+		<div class="tab">
+			<div id="kannada" class="tab-content"></div>
+		</div>
+		<div class="tab">
+			<div id="tamil" class="tab-content"></div>
+		</div>
 	</section>
 	<script>
 		var carousel = (function(){
@@ -67,6 +81,14 @@
 				moveLeft();
 			});
 		})();
+
+		var myTabs = tabs({
+		    el: '#tabs',
+		    tabNavigationLinks: '.tabs-nav-link',
+		    tabContentContainers: '.tab'
+  		});
+  		myTabs.init();
+
 	</script>
 </body>
 </html>
