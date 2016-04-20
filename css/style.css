@@ -1,8 +1,8 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #EAF3BA;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  	background-color: #EAF3BA;
 }
 .carousel {
 	position: relative;
@@ -34,34 +34,34 @@ html, body {
 }
 
 a.arrow-right, a.arrow-left {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
+  	position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    background: #2a2a2a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 a.arrow-left:hover, a.arrow-right:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease;
+  	opacity: 1;
+   -webkit-transition: all 0.2s ease;
 }
 
 a.arrow-left {
-  border-radius: 0 2px 2px 0;
+  	border-radius: 0 2px 2px 0;
 }
 
 a.arrow-right {
-  right: 0;
-  border-radius: 2px 0 0 2px;
+  	right: 0;
+  	border-radius: 2px 0 0 2px;
 }
 
 .tabs-nav{
@@ -90,8 +90,8 @@ a.arrow-right {
 }
 
 .tabs-nav-link.is-active {
-  color: #dc446e;
-  background-color: #e7e7e7;
+  	color: #dc446e;
+  	background-color: #e7e7e7;
 }
 
 .tab {

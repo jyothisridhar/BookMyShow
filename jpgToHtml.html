@@ -3,8 +3,11 @@
 <head>
 </head>
 <body>
+	<!-- draw canvas for the jpg image -->
 	<canvas id="canvas" width="200" height="200" style="border:1px solid #d3d3d3;"></canvas>
 	<div id="color"></div>
+
+	<!-- html table where image pixels will be added to -->
 	<table id="imageTable">
 	</table>
 	<script>
@@ -15,6 +18,7 @@
 		img.src = "images/po.jpg";
 		var ctx = canvas.getContext("2d");
 		var color = document.getElementById('color');
+
 		function draw(img){
 			var canvas = document.getElementById('canvas');
 			
@@ -26,12 +30,13 @@
 			var red = green = blue = alpha = 0;
 			var table = document.getElementById('imageTable');
 
+			//iterate over all pixels and create rows and columns for each pixel
 			for(var y = 0; y < imageHeight; y++) {
-          		// loop through each column
           		var row = document.createElement('tr');
           		row.setAttribute("id","imgRow[" + y + "]");
           		table.appendChild(row);
 
+          		// loop through each column
 	          	for(var x = 0; x < imageWidth; x++) {
 	            	red = pixelData[((imageWidth * y) + x) * 4];
 	            	green = pixelData[((imageWidth * y) + x) * 4 + 1];
