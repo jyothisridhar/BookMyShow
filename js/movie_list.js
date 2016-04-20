@@ -1,6 +1,5 @@
 (function(){
 	"use strict";
-console.log("in movie.js");
 	var tabs = function(options){
 		var el = document.querySelector(options.el);
 		var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
@@ -9,10 +8,8 @@ console.log("in movie.js");
 		var initCalled = false;
 
 		var init = function(){
-			console.log("in init");
 			if(!initCalled){
 				initCalled = true;
-				// el.classList.remove('no-js');
 
 				for(var i = 0; i < tabNavigationLinks.length; i++){
 					var link = tabNavigationLinks[i];

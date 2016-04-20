@@ -12,7 +12,7 @@ $(document).ready(function(){
 		var $tamil = $('#tamil');
 
 		$.each(data, function(idx, item){
-			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>' + item.RunTime + '</p><p>' + item.UserVotes + '</p><p>' + item.likes + '</p></div></li>';
+			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>R | ' + item.RunTime + '</p></div><div class="popularity"><p><img src="../images/heart.png" alt="<3">' + item.likes + '</p><p style="font-size: 12px">' + item.UserVotes + 'votes</p></div></li>';
 
 			items.push(htmlString);
 		});
@@ -31,7 +31,7 @@ $(document).ready(function(){
 		});
 
 		$.each(englishMovies, function(idx, item){
-			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>' + item.RunTime + '</p><p>' + item.UserVotes + '</p><p>' + item.likes + '</p></div></li>';
+			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>R | ' + item.RunTime + '</p></div><div class="popularity"><p><img src="../images/heart.png" alt="<3">' + item.likes + '</p><p style="font-size: 12px">' + item.UserVotes + 'votes</p></div></li>';
 
 			items.push(htmlString);
 		});
@@ -50,7 +50,7 @@ $(document).ready(function(){
 		});
 
 		$.each(kannadaMovies, function(idx, item){
-			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>' + item.RunTime + '</p><p>' + item.UserVotes + '</p><p>' + item.likes + '</p></div></li>';
+			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>R | ' + item.RunTime + '</p></div><div class="popularity"><p><img src="../images/heart.png" alt="<3">' + item.likes + '</p><p style="font-size: 12px">' + item.UserVotes + 'votes</p></div></li>';
 
 			items.push(htmlString);
 			console.log("items:", items);
@@ -70,7 +70,7 @@ $(document).ready(function(){
 		});
 
 		$.each(hindiMovies, function(idx, item){
-			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>' + item.RunTime + '</p><p>' + item.UserVotes + '</p><p>' + item.likes + '</p></div></li>';
+			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>R | ' + item.RunTime + '</p></div><div class="popularity"><p><img src="../images/heart.png" alt="<3">' + item.likes + '</p><p style="font-size: 12px">' + item.UserVotes + 'votes</p></div></li>';
 
 			items.push(htmlString);
 		});
@@ -89,7 +89,7 @@ $(document).ready(function(){
 		});
 
 		$.each(tamilMovies, function(idx, item){
-			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>' + item.RunTime + '</p><p>' + item.UserVotes + '</p><p>' + item.likes + '</p></div></li>';
+			var htmlString = '<li><div><img src="images/' + item.EventId + '.jpg"' + 'alt="' + item.EventId + '"></div><div><p><b>' + item.EventName + '</b></p><p>' + item.Language + '</p><p>' + item.Genre + '</p><p>R | ' + item.RunTime + '</p></div><div class="popularity"><p><img src="../images/heart.png" alt="<3">' + item.likes + '</p><p style="font-size: 12px">' + item.UserVotes + 'votes</p></div></li>';
 
 			items.push(htmlString);
 			console.log("items:", items);

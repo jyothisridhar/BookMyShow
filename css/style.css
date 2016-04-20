@@ -94,32 +94,6 @@ a.arrow-right {
   background-color: #e7e7e7;
 }
 
-.tabs-nav-link i,
-.tabs-nav-link span {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-.tabs-nav-link i {
-  font-size: 18px;
-}
-
-.tabs-nav-link span {
-  display: none;
-  font-size: 18px;
-}
-
-@media all and (min-width: 720px) {
-  .tabs-nav-link i {
-    margin-bottom: 12px;
-    font-size: 22px;
-  }
-  .tabs-nav-link span {
-    display: block;
-  }
-}
-
 .tab {
 	display: none;
 }
@@ -133,11 +107,11 @@ a.arrow-right {
 }
 
 .new-movie li {
-	display: inline-block;
+	display: flex;
 	float: left;
 	margin: 5px;
 	padding: 5px;
-	width: 500px;
+	width: 550px;
 	height: 300px;
 	background-color: #EEFAF4;
 }
@@ -146,4 +120,23 @@ a.arrow-right {
 	float: left;
 	margin: 5px;
 	padding: 5px;
+}
+
+.popularity {
+	text-align: right;
+}
+@media all and (min-width: 720px) {
+  .tabs-nav-link i {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+  .tabs-nav-link span {
+    display: block;
+  }
+}
+
+@media all and (max-width: 500px){
+	.new-movie li {
+  		width: 450px;
+  	}
 }
