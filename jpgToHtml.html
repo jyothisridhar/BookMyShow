@@ -4,20 +4,51 @@
 </head>
 <body>
 	<canvas id="canvas" width="200" height="200" style="border:1px solid #d3d3d3;"></canvas>
-	<input type="button" id="convert" value="convert"/>
+	<div id="color"></div>
+	<table id="imageTable">
+	</table>
 	<script>
-
 		var img = new Image();
-		img.src = "Assignment/images/po.jpg";
 		img.onload = function() {
 		  draw(this);
 		};
+		img.src = "images/po.jpg";
+		var ctx = canvas.getContext("2d");
+		var color = document.getElementById('color');
 		function draw(img){
 			var canvas = document.getElementById('canvas');
-			var ctx = canvas.getContext("2d");
+			
+			var imageWidth = img.width;
+			var imageHeight = img.height;
 			ctx.drawImage(img, 0, 0);
-			var data = ctx.getImageData(0,0,canvas.width,canvas.height);
-			console.log("pixel data:", data,"no of pixels:", data.data.length/4);
+			var pixelData = ctx.getImageData(0,0,imageWidth, imageHeight).data;
+
+			var red = green = blue = alpha = 0;
+			var table = document.getElementById('imageTable');
+
+			for(var y = 0; y < imageHeight; y++) {
+          		// loop through each column
+          		var row = document.createElement('tr');
+          		row.setAttribute("id","imgRow[" + y + "]");
+          		table.appendChild(row);
+
+	          	for(var x = 0; x < imageWidth; x++) {
+	            	red = pixelData[((imageWidth * y) + x) * 4];
+	            	green = pixelData[((imageWidth * y) + x) * 4 + 1];
+	            	blue = pixelData[((imageWidth * y) + x) * 4 + 2];
+	            	alpha = pixelData[((imageWidth * y) + x) * 4 + 3];
+
+	          		var rgba = 'rgba(' + red + ',' + green + ',' + blue + ',' + alpha + ')';
+
+	          		var col = document.createElement('td');
+	          		var content = document.createTextNode("");
+	          		col.appendChild(content);
+	          		col.style.background = rgba;
+	          		document.getElementById('imgRow[' + y + ']').appendChild(col);
+	          	}
+
+        	}
+			console.log("pixel data:", pixelData,"no of pixels:", pixelData.length/4);
 		}
 	</script>
 </body>
